@@ -14,7 +14,7 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-DEVICE_PATH := device/motorola/liber
+DEVICE_PATH := device/motorola/odessa
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
