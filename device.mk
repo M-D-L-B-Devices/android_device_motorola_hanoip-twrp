@@ -11,6 +11,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
+# Enable virtual A/B OTA
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
 # define hardware platform
 PRODUCT_PLATFORM := sm6150
 
@@ -24,10 +27,11 @@ AB_OTA_PARTITIONS += \
     boot \
     dtbo \
     product \
-    recovery \
     system \
     vendor \
-    vbmeta
+    vendor_boot \
+    vbmeta \
+    vbmeta_system
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
